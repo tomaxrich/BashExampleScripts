@@ -1,0 +1,18 @@
+#File Name:	Question 2
+#Author:	Thomas Richardson
+#Purpose:	To determine whether or not a host is on your network;
+#Breif Description: The command takes a name of a host as a paramter and tells the user whether
+			or not a given value is on the Network
+
+#!/bin/sh
+name="$1"
+set `uname -a`
+if [ $2 != $name ]
+	then 
+	echo "This host is NOT on the Network"
+	exit 1
+else
+	echo "This host is on the Network"
+	exit 1
+fi
+

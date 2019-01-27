@@ -1,0 +1,24 @@
+#File Name:	Question 1
+#Author:	Thomas Richardson
+#Purpose:	To Calculate the lsit parameters squared sum, and the lists total valued Sum;
+#Breif Description: The command takes a list of Integers as parameters. (x^2)squared value 
+#		and(a + b + n = total) total sum, are then calculated, then 
+#		displayed on the Screen
+
+#!/bin/sh
+
+if [ "$#" = 0 ]
+	then
+		echo sum_of_list
+		exit 1
+fi
+sum_of_list=0
+while [ "$#" != 0 ]
+	do
+	squared_number=`expr $1 \* $1`
+	echo "$squared_number"
+	sum_of_list=`expr $sum_of_list + $1`
+	shift
+done
+echo "$sum_of_list"
+exit 0

@@ -1,0 +1,45 @@
+#File Name:	Question 3
+#Author:	Thomas Richardson
+#Purpose:	To Display several Utilities on the terminal;
+#Breif Description: The command takes input from the user directly from a breif 
+#			display interface. It displays a list of files in your 
+#			current directory, The date, and who's logged in.
+
+#!/bin/sh
+option1(){
+	date
+}
+option2(){
+	ls
+}
+option3(){
+	who
+}
+option4(){
+	test=0
+}
+test=1
+while [ $test = 1 ]
+do
+echo "Use one of the following options:"
+echo "	d:	To display today's date and present time"
+echo "	l:	To see the listing of files in your present working directory"
+echo "	w:	To see who's logged in"
+echo "	q:	To quit ths program"
+echo "Enter your option and hit <Enter>: \c"
+read option
+case "$option" in
+	d) option1
+		continue
+		;;
+	l) option2
+		continue
+		;;
+	w) option3
+		continue
+		;;
+	q) option4
+		;;
+esac
+done
+exit 0
